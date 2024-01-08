@@ -10,7 +10,6 @@
   <link rel="icon" type="image/png" href="./chicken.webp">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -28,7 +27,7 @@
         <li><a class="uppercase" href="#">Log in</a></li>
       </ul>
       <ul class="flex gap-4 items-center">
-        <li><img src="./lock.png" class="w-8" alt=""></li>
+        <li><img src="./lock.png" class="w-8" id="lock" alt=""></li>
         <li><a class="uppercase btn text-white bg-orange-600 hover:bg-gray-500" href="#">Order Now</a></li>
       </ul>
     </nav>
@@ -56,53 +55,50 @@
           <div class="food-item w-60 rounded-xl bg-base-200" data-id="1">
             <img class="w-60 h-56 rounded-md" src="./chicken.webp" alt="">
             <h3 class="font-bold pt-1">Chicken</h3>
-            <p class="py-1 price">69<span>$/each</span></p>
+            <span class="py-1 price">69</span>$/each
             <p class="py-4"> Fluffy feathers, clucking in the barnyard, pecking for grains, a feathered friend on the
               farm, delicious roast awaits. Let's eat together.</p>
             <button class="add-to-cart-btn btn w-full bg-orange-600 hover:bg-gray-600 hover:text-white text-white">Add
               to
               Order</button>
-            <button
-              class="btn w-full bg-white border border-orange-600  text-orange-600 mt-2">Customize</button>
+            <button class="btn w-full bg-white border border-orange-600  text-orange-600 mt-2">Customize</button>
           </div>
 
           <!-- card-2  -->
           <div class="food-item w-60 rounded-xl bg-base-200" data-id="2">
             <img class="w-60 h-56 rounded-md" src="./fajitas.jpg" alt="">
             <h3 class="font-bold pt-1">Fajitas</h3>
-            <p class="py-1 price">169<span>$/each</span></p>
+            <span class="py-1 price">169</span>$/each
             <p class="py-4 ">Sizzling skillet, colorful peppers and onions, warm tortillas, zesty spices, a burst of
               flavors, a Tex-Mex fiesta in every bite.</p>
             <button class="add-to-cart-btn btn w-full bg-orange-600 hover:bg-gray-600 hover:text-white  text-white">Add
               to
               Order</button>
-            <button
-              class="btn w-full bg-white border border-orange-600  text-orange-600 mt-2">Customize</button>
+            <button class="btn w-full bg-white border border-orange-600  text-orange-600 mt-2">Customize</button>
           </div>
 
           <!-- card-3  -->
           <div class="food-item w-60 rounded-xl bg-base-200" data-id="3">
             <img class="w-60 h-56 rounded-md" src="./Chicken-Masala.webp" alt="">
             <h3 class="font-bold pt-1">Chicken Masala</h3>
-            <p class="py-1 price">269<span>$/each</span></p>
+            <span class="py-1 price">269</span>$/each
             <p class="py-4">Aromatic spices, simmering curry, tender chicken pieces, a dance of flavors, Indian culinary
               delight, a taste journey to Mumbai.</p>
             <button class="add-to-cart-btn btn w-full bg-orange-600 hover:bg-gray-600 hover:text-white  text-white">Add
               to
               Order</button>
-            <button
-              class="btn w-full bg-white border border-orange-600  text-orange-600 mt-2">Customize</button>
+            <button class="btn w-full bg-white border border-orange-600  text-orange-600 mt-2">Customize</button>
           </div>
         </div>
-     
+
 
 
         <!-- sidebar  -->
         <div class="cart-sidebar w-96 bg-orange-600" id="cartSidebar">
           <div id="totalAmount" class="text-white mt-4 font-bold relative bottom-0">Total: $0.00</div>
-        
+
         </div>
-        
+
       </div>
 
     </div>
