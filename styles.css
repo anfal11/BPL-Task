@@ -31,7 +31,16 @@ body {
     /* width: 300px; */
     border: 1px solid #ccc;
     padding: 20px;
+    right: -100%; /* Initially, keep it off-screen */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #ff9900; /* Customize the background color */
+    transition: right 0.3s ease-in-out;
   }
-
+  .show-drawer {
+    right: 0; /* Slide in from the right */
+  }
   
   
