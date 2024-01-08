@@ -35,7 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="text-white font-bold">${itemName}</span> </br>
             <span class="text-white font-bold">${itemPrice.toFixed(2)}$/each</span> </br>
             <input class="w-20 text-black" type="number" value="1" min="1">
-            <button class="remove-from-cart-btn relative"><span class="absolute right-0 -top-20 text-white">Remove</span></button>
+            <figure class="relative">
+            <img src="./remove.png" class="w-8 remove-from-cart-btn absolute -top-24 -right-4 cursor-pointer" alt="">
+            </figure>
           </div>        
         </div>
       `;
@@ -65,7 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cartSidebar.addEventListener("click", (event) => {
     if (event.target.classList.contains("remove-from-cart-btn")) {
-      removeFromCart(event.target.parentElement);
+      const cartItem = event.target.closest(".cart-item");
+      if (cartItem) {
+        removeFromCart(cartItem);
+      }
     }
   });
 });
