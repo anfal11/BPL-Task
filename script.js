@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
       addToCart(event.target.parentElement);
       event.target.disabled = true;
       event.target.innerText = "Added to Cart";
-      // Show the cart sidebar as a drawer
       cartSidebar.classList.add("show-drawer");
     }
   });
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <span class="text-white font-bold total-price-details">Total: $${itemPrice.toFixed(2)}</span> </br>
             </div>
             <figure class="relative">
-              <img src="./remove.png" class="w-8 remove-from-cart-btn absolute -top-24 -right-4 cursor-pointer" alt="">
+              <img src="./remove.png" class="w-8 remove-from-cart-btn absolute -top-36 -right-4 cursor-pointer" alt="">
             </figure>
           </div>        
         </div>
