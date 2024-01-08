@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const foodSection = document.getElementById("foodSection");
   const cartSidebar = document.getElementById("cartSidebar");
-  const totalAmount = document.getElementById("totalAmount");
+  const totalAmountElement = document.getElementById("totalAmount");
+
+  // Initialize total amount
+  let totalAmount = 0;
 
   foodSection.addEventListener("click", (event) => {
     if (event.target.classList.contains("add-to-cart-btn")) {
@@ -15,9 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const itemId = item.dataset.id;
     const itemImg = item.querySelector("img").src;
     const itemName = item.querySelector("h3").innerText;
-    const itemPrice = parseFloat(
-      item.querySelector(".price").innerText
-    );
+    const itemPrice = parseFloat(item.querySelector(".price").innerText);
 
     const existingCartItem = cartSidebar.querySelector(`[data-id="${itemId}"]`);
 
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div>
             <span class="text-white font-bold">${itemName}</span> </br>
             <span class="text-white font-bold">${itemPrice.toFixed(2)}$/each</span> </br>
-            <input  class="w-20 text-white" type="number" value="1" min="1" disabled>
+            <input class="w-20 text-black" type="number" value="1" min="1">
             <button class="remove-from-cart-btn relative"><span class="absolute right-0 -top-20 text-white">Remove</span></button>
           </div>        
         </div>
@@ -58,9 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateTotalAmount(amount) {
-    const currentTotal = parseFloat(totalAmount.innerText);
-    totalAmount.innerText = (currentTotal + amount).toFixed(2);
-  }
+    totalAmount += amount;
+    totalAmountElement.innerText = `Total: $${totalAmount.toFixed(2)}`;
+  }  
 
   cartSidebar.addEventListener("click", (event) => {
     if (event.target.classList.contains("remove-from-cart-btn")) {
